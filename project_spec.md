@@ -17,9 +17,9 @@ Backfills: Supported for any date range
 
 # Storage design
 
-Raw: S3 s3://<bucket>/tlc/raw/dt=YYYY-MM-DD/…json
+Raw: S3 s3://<bucket>/tlc/raw/dt=YYYY-MM-DD/…parquet
 
-Staging: S3 s3://<bucket>/tlc/stage/dt=YYYY-MM-DD/…parquet|json
+Staging: S3 s3://<bucket>/tlc/stage/dt=YYYY-MM-DD/…parquet
 
 Warehouse: Snowflake
 
@@ -65,11 +65,11 @@ dbt test failures: fail pipeline (surfaced clearly)
 
 Minimize Snowflake compute by:
 
-loading once per day
+* loading once per day
 
-using incremental models
+* using incremental models
 
-limiting dev runs to small date ranges
+* limiting dev runs to small date ranges
 
 # Definition of Done (by early Feb)
 
