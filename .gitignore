@@ -15,3 +15,5 @@ venv/
 # Local data
 tmp/
 data/
+*.parquet
+*.tmp
